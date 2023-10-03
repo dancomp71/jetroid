@@ -1,5 +1,9 @@
-﻿using UnityEngine;
+﻿using Assets.Jetroid.Scripts;
+using UnityEngine;
 
+/// <summary>
+/// a collectible item for a player
+/// </summary>
 public class Collectible : MonoBehaviour
 {
 
@@ -17,7 +21,7 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.gameObject.tag == "Player")
+        if (target.gameObject.tag == TagNames.Player)
         {
             Destroy(gameObject);
         }
